@@ -37,7 +37,8 @@ public class MahasiswaDemo12 {
         list.tampilDataSearch(cari, pss);
 
         System.out.println("Menggunakan Binary Search");
-        double posisi2 = list.findBinarySearch(cari, 0, jumMhs - 1);
+        boolean descending = list.listMhs[0].ipk > list.listMhs[list.idx - 1].ipk;
+        int posisi2 = list.findBinarySearch(cari, 0, jumMhs - 1, descending);
         int pss2 = (int) (posisi2);
         list.tampilPosisi(cari, pss2);
         list.tampilDataSearch(cari, pss2);
